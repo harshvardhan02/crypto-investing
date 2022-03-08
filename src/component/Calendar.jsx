@@ -44,8 +44,8 @@ export default function Calendar(props) {
         start: startTime,
         end: endTime,
         date,
-        backgroundColor: role === 'staff' ? '#6C2FE4' : 'green',
-        borderColor,
+        backgroundColor: role === 'staff' ? '#6C2FE4' : 'pink',
+        borderColor: role === 'staff' ? '#6C2FE4' : 'pink',
         interactive,
         extendedProps: { ...appointment }
       }
