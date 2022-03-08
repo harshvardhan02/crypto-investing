@@ -73,7 +73,7 @@ export default function Profile() {
             </div>
             <div className="grid grid-cols-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 mt-4">
               <div className='flex flex-col'>
-                <label className='text-[#6C2FE4] text-semibold text-lg'>Facebook</label>
+                <label className='text-[#6C2FE4] dark:text-gray-300 text-semibold text-lg'>Facebook</label>
                 <input readOnly className='p-4 bg-gray-100 dark:bg-slate-700 dark:text-gray-300 mt-3' type="text" defaultValue={'facebook.com'} />
               </div>
               <div className='flex flex-col'>

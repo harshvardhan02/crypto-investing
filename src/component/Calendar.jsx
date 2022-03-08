@@ -55,8 +55,23 @@ export default function Calendar(props) {
 
   return (
     <FullCalendar
-      defaultView="dayGridMonth"
+      headerToolbar={{
+        left: 'dayGridMonth,dayGridWeek,dayGridDay',
+        center: 'title',
+        right: 'myCustomButton prev,next'
+      }}
+      customButtons={{
+        myCustomButton: {
+          text: 'Add New Event',
+          click: function () {
+            alert('clicked the custom button!');
+          },
+        },
+      }}
+      initialView="dayGridMonth"
       plugins={[dayGridPlugin, interactionPlugin]}
+      weekends={true}
+      dayMaxEvents={true}
       editable={true}
       eventDrop={handleEventDrop}
       eventClick={handleEventClick}
