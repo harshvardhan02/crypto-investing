@@ -39,6 +39,7 @@ export default function TheHeader() {
   }, [])
 
   useEffect(() => {
+    // Dark mode with tailwind
     if (isDark) {
       window.document.documentElement.classList.add('dark')
       localStorage.setItem("DarkMode", "true")
