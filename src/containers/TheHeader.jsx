@@ -113,7 +113,7 @@ export default function TheHeader() {
                         <span className="sr-only">View notifications</span>
                         <AiOutlineBell className="h-6 w-6" aria-hidden="true" />
                       </button>
-                      <span className="absolute top-1.5 right-1.5 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></span>
+                      <span className="absolute top-2 right-2 inline-block w-2 h-2 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"></span>
                     </div>
 
 
