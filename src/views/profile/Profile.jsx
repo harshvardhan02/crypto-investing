@@ -26,7 +26,7 @@ export default function Profile() {
       <div className="p-4 bg-white dark:bg-slate-800 drop-shadow-md mt-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-8">
           <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1 flex flex-col items-center bg-gray-100 dark:bg-slate-700 p-8">
-            <img className="h-38 w-38 md:h-28 md:w-28 sm:w-28 sm:h-28 rounded-full" src={user.imageUrl} alt="user" />
+            <img className="h-32 w-32 lg:h-38 lg:w-38 md:h-28 md:w-28 sm:w-28 sm:h-28 rounded-full" src={user.imageUrl} alt="user" />
             <div className="flex justify-center items-center mt-3">
               <BiPencil className='text-[#6C2FE4] dark:text-gray-300 cursor-pointer' />
               <Link className='text-[#6C2FE4] dark:text-gray-300 font-bold text-sm ml-2' to="">Edit Photo</Link>
@@ -37,7 +37,7 @@ export default function Profile() {
             </button>
           </div>
           <div className="col-span-2 bg-gray-white">
-            <div className="grid grid-cols-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 md:gap-8 sm:gap-8">
               <div className='flex flex-col'>
                 <label className='text-[#6C2FE4] dark:text-gray-300 text-semibold text-lg'>First Name</label>
                 <input readOnly className='p-4 bg-gray-100 dark:bg-slate-700 dark:text-gray-300 mt-3' type="text" defaultValue={'Kate'} />
@@ -71,7 +71,7 @@ export default function Profile() {
             <div className="p-3 bg-[#6C2FE4] dark:text-gray-300 dark:bg-slate-900 mt-4">
               <p className="text-white">Social Information</p>
             </div>
-            <div className="grid grid-cols-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+            <div className="grid lg:grid-cols-2 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-8 md:gap-8 sm:gap-8 mt-4">
               <div className='flex flex-col'>
                 <label className='text-[#6C2FE4] dark:text-gray-300 text-semibold text-lg'>Facebook</label>
                 <input readOnly className='p-4 bg-gray-100 dark:bg-slate-700 dark:text-gray-300 mt-3' type="text" defaultValue={'facebook.com'} />
