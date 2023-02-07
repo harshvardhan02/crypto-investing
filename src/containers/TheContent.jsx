@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import routes from '../routes';
 import { FiLoader } from "react-icons/fi";
 

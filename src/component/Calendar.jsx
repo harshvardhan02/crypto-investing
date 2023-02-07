@@ -13,9 +13,9 @@ export default function Calendar(props) {
     setIsOpen(false)
   }
 
-  function openModal() {
-    setIsOpen(true)
-  }
+  // function openModal() {
+  //   setIsOpen(true)
+  // }
 
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ export default function Calendar(props) {
 
   const formatEvents = (props) => {
     return appointments.map(appointment => {
-      const { title, end, start, date, backgroundColor, borderColor, interactive, url, role } = appointment
+      const { title, end, start, date, interactive, role } = appointment
 
       let startTime = new Date(start)
       let endTime = new Date(end)

@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './redux'
 import { FiLoader } from "react-icons/fi";
 
 const loading = (
@@ -16,11 +18,13 @@ const TheLayout = React.lazy(() => import('./containers/TheLayout'));
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={loading}>
-        <Routes>
-          <Route path="/*" element={<TheLayout />} />
-        </Routes>
-      </Suspense>
+      <Provider store={store}>
+        <Suspense fallback={loading}>
+          <Routes>
+            <Route path="/*" element={<TheLayout />} />
+          </Routes>
+        </Suspense>
+      </Provider>
     </BrowserRouter>
   );
 }

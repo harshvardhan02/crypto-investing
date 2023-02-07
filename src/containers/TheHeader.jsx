@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import { useSelector } from 'react-redux';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { AiOutlineBell, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { MdOutlineWbSunny } from "react-icons/md";
@@ -29,6 +30,8 @@ function classNames(...classes) {
 
 export default function TheHeader() {
   const [isDark, setIsDark] = useState(Boolean);
+
+  const appName = useSelector(state => state.appReducer.name)
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -67,6 +70,9 @@ export default function TheHeader() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
+                  <div className="flex-shrink-0 text-gray-400 font-extrabold text-red-300">
+                    {appName}
+                  </div>
                   {/* <div className="flex-shrink-0">
                     <img
                       className="h-8 w-8"

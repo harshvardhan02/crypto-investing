@@ -2,7 +2,7 @@ import React from 'react';
 import {
   TheContent,
   TheSidebar,
-  TheFooter,
+  // TheFooter,
   TheHeader
 } from './';
 
