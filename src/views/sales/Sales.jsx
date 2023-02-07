@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tab } from '@headlessui/react';
+import GenericTable from '../../component/GenericTable';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -8,7 +9,7 @@ function classNames(...classes) {
 export default function Sales() {
 
   const categories = [
-    { name: "Past", value: "Past", component: <div>1</div> },
+    { name: "Past", value: "Past", component: <GenericTable /> },
     { name: "Current", value: "Current", component: <div>2</div> },
     { name: "Upcoming", value: "Upcoming", component: <div>3</div> },
   ]
@@ -36,7 +37,7 @@ export default function Sales() {
               </Tab>
             ))}
           </Tab.List>
-          <Tab.Panels className="mt-5 drop-shadow-md bg-white">
+          <Tab.Panels className="mt-5 drop-shadow-md">
             {categories.map((cmp, idx) => (
               <Tab.Panel
                 key={idx}
